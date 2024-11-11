@@ -1,0 +1,22 @@
+package codigo;
+
+import java_cup.runtime.Symbol;
+
+parser code
+{:
+    private Symbol s;
+    
+    public void syntax_error(Symbol s){
+        this.s = s;
+    }
+
+    public Symbol getS(){
+        return this.s;
+}
+:};
+
+terminal     ntudi, ndängi, ñöhö, dämä, ngähä, mathoni, ho, MA, HU, TU;
+non terminal presentacion;
+
+presentacion ::= MA TU HU
+;
